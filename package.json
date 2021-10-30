@@ -1,15 +1,22 @@
 {
   "name": "frame-rate-web-component",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Frame Rate Web Component",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "keywords": [
     "web-component",
     "frame-rate"
   ],
   "author": "Artem Nikolaev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.61.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1"
+  }
 }
