@@ -1,12 +1,15 @@
 {
   "name": "frame-rate-web-component",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Frame Rate Web Component",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["web-component", "frame-rate"],
+  "keywords": [
+    "web-component",
+    "frame-rate"
+  ],
   "author": "Artem Nikolaev",
   "license": "ISC"
 }
