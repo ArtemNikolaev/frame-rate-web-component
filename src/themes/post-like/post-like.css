@@ -1,0 +1,9 @@
+svg {
+    display: inline;
+    width: 5vh;
+    padding: 0.5vh 0.5vh 0 0;
+}
+
+.hide {
+    display: none;
+}

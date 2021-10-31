@@ -1,24 +1,17 @@
+import styleEl from './style/style';
+import generatePostLikeTheme from './themes/post-like';
+
 class FrameRate extends HTMLElement {
   constructor() {
     super();
     this.frameRate = 144;
+    this.theme = generatePostLikeTheme(this.frameRate);
 
     const shadow = this.attachShadow({mode: 'open'});
 
-    const div = document.createElement('div');
-    div.innerText = this.frameRate;
+    shadow.appendChild(styleEl);
 
-    const style = document.createElement('style');
-    style.textContent = `
-      div {
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-    `;
-
-    shadow.appendChild(style);
-    shadow.appendChild(div);
+    this.theme.forEach(node => shadow.appendChild(node));
   }
 }
 
