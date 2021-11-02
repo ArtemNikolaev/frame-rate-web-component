@@ -3,11 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Frame Rate Web Component Demo</title>
+
 </head>
 <body>
 <h1>Frame Rate WebComponent Demo</h1>
 <script src="/dist/frame-rate.bundle.js"></script>
 
 <frame-rate></frame-rate>
+
+<script>
+    const frameRateEl = document.querySelector('frame-rate');
+
+    function onOffFrameRate() {
+        if (typeof frameRateEl.getAttribute('off') === 'string') {
+            frameRateEl.removeAttribute('off');
+        } else {
+            frameRateEl.setAttribute('off', '');
+        }
+    }
+</script>
+<button onclick="onOffFrameRate()">ON/OFF Frame Rate</button>
 </body>
 </html>
