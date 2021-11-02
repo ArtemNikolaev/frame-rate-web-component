@@ -2,11 +2,10 @@
 > WebComponent which shows the current page frame rate.
 > Can be easy added on any html-page.
 
-# Version: v0.4.0
+## Version: v0.4.0
 [CHANGELOG](CHANGELOG.md)
 
-# ToDo:
-- on/off mechanism
+## ToDo:
 - theming
 - slots for themes
 - theme: just number
@@ -15,7 +14,7 @@
 - documentation
 - bundling: dev and prod
 
-# Installation
+## Installation
 ####Prerequarement
   * [NodeJS](https://nodejs.org/en/)
 
@@ -31,4 +30,11 @@
 
     // prod
     npm build
+```
+## Documentation
+
+#### On / Off functionality
+Use attribute `off` to disable component.
+```angular2html
+    <frame-rate off></frame-rate>
 ```

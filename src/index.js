@@ -24,7 +24,7 @@ class FrameRate extends HTMLElement {
 
   counter() {
     if (this.isInactive) {
-      this.framesAmount.splice(0);
+      this.frameAmount.splice(0);
 
       return;
     }
@@ -50,7 +50,11 @@ class FrameRate extends HTMLElement {
   }
 
   attributeChangedCallback(key, prev, next) {
+    if (!this[key]) return 0;
 
+    try {
+      this[key](prev, next);
+    } catch (e) { }
   }
 
   render() {
@@ -67,11 +71,13 @@ class FrameRate extends HTMLElement {
     this.counter();
   }
 
-  off() {
-    this.isInactive = true;
+  off(prev, next) {
+    this.isInactive = typeof next === 'string';
+
+    if (!this.isInactive) this.counter();
   }
 
-  static get observedAttributes() {return ['hide'];}
+  static get observedAttributes() {return ['off'];}
 }
 
 customElements.define('frame-rate', FrameRate)
