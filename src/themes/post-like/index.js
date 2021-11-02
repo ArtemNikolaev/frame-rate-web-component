@@ -26,8 +26,8 @@ export default function generatePostLikeTheme(frames) {
       }
     );
 
-  return [
-    themeStyle,
-    div,
-  ]
+  return {
+      style: themeStyle,
+      el: div,
+  };
 }
